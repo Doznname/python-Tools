@@ -28,7 +28,6 @@ class OracleUtil(object):
         sql = "select * from test_01 where id >= 0 AND (url is NULL or url=' ')"
         self.cursor.execute(sql)
         result =self.cursor.fetchone()
-        # print list(result)
         return list(result)
         # return result
 
@@ -42,10 +41,7 @@ class OracleUtil(object):
         # self.initConn()
         if com_url == None:
             return 0
-        # sql = "update company_name01 set url = '%s' where id = '%d'" % (com_url,com_id)
         sql = "update test_01 set url = '%s' where id ='%s'" % (com_url,com_id)
-        # param=(com_url,int(com_id))
-        # print sql
         try:
             # 执行SQL语句
             self.cursor.execute(sql)
@@ -73,7 +69,6 @@ class OracleUtil(object):
             print e
             self.conn.rollback()
             print "insert failed"
-            flag = 0
         # 关闭数据库连接
         self.conn.close()
 
@@ -97,6 +92,5 @@ class OracleUtil(object):
             print
             self.conn.rollback()
             print "update failed"
-            flag = 0
         # 关闭数据库连接
         self.conn.close()

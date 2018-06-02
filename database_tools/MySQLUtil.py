@@ -56,7 +56,7 @@ class MySQLUtil(object):
 
     def insertRecords(self, items):
         self.initConn()
-        sql = "insert into company_name01(com_name, province, city, status) VALUES (%s,%s,%s,%s)"
+        sql = "insert into table_name(com_name, province, city, status) VALUES (%s,%s,%s,%s)"
         try:
             # 执行SQL语句
             self.cursor.executemany(sql, items)
@@ -68,7 +68,6 @@ class MySQLUtil(object):
             print e
             self.conn.rollback()
             print "insert failed"
-            flag = 0
         # 关闭数据库连接
         self.conn.close()
 

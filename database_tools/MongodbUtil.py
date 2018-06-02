@@ -10,7 +10,7 @@ class MongodbUtil(object):
     #集合名称(会自动创建)
     collection_name = 'collection_name'
     def __init__(self):
-        self.mongo_uri = 'mongodb://localhost:27017'  # Host URL
+        self.mongo_uri = 'mongodb://localhost:27017'
         # 数据库名
         self.mongo_db ='test'
 

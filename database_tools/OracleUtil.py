@@ -1,5 +1,5 @@
 # encoding=utf-8
-# author: haven
+# author: doo
 
 import cx_Oracle
 import os

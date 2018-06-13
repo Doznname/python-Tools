@@ -16,7 +16,7 @@ class RegularPatternUtil(object):
 
     def pattern2(self):
         """
-        模式1：匹配"\n", " ", "\t", "\r"
+        模式2：匹配"\n", "\r"
         :return:
         """
         return re.compile('["\n","\r"]*')  # 用于编译正则表达式并返回对象

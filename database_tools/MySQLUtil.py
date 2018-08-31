@@ -10,8 +10,8 @@ class MySQLUtil(object):
     username = "root"
     password = "root"
     database = "test"
-
-    def initConn(self):
+    
+    def __init__(self):
         self.conn = MySQLdb.connect(self.host, self.username, self.password, self.database, charset='utf8')
         self.cursor = self.conn.cursor()
 
